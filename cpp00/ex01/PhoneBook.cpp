@@ -1,17 +1,8 @@
-#include <iostream>
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(void) : count(0), oldestIndex(0)
-{
-	std::cout << "PhoneBook created" << std::endl;
-	return ;
-}
+PhoneBook::PhoneBook() : count(0), oldestIndex(0) {}
 
-PhoneBook::~PhoneBook(void)
-{
-	std::cout << "PhoneBook destroyed" << std::endl;
-	return ;
-}
+PhoneBook::~PhoneBook() {}
 
 void PhoneBook::addContact(const Contact &c) 
 {
@@ -27,7 +18,7 @@ void PhoneBook::addContact(const Contact &c)
 	}
 }
 
-void PhoneBook::displayContact(int index) 
+void PhoneBook::displayContact(int index) const
 {
 	if (index < 0 || index >= count) 
 	{
@@ -42,9 +33,11 @@ void PhoneBook::displayContact(int index)
 	std::cout << "Darkest Secret: " << c.getDarkestSecret() << std::endl;
 }
 
-Contact PhoneBook::getContact(int index) const {
-	if (index < 0 || index >= 8) {
-		return Contact(); // return empty contact
+Contact PhoneBook::getContact(int index) const
+{
+	if (index < 0 || index >= 8) 
+	{
+		return Contact();
 	}
 	return contacts[index];
 }
