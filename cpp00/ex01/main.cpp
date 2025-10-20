@@ -108,7 +108,6 @@ bool isNumeric(const std::string& str)
     return true;
 }
 
-
 void addContactInteraction(PhoneBook &phoneBook)
 {
     std::string input;
@@ -235,7 +234,7 @@ void mainLoop(PhoneBook &phoneBook)
         }
 
         if (command == "EXIT")
-        {
+		{
             break;
         }
         else if (command == "ADD")
