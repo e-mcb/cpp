@@ -2,6 +2,7 @@
 # define ANIMAL_HPP
 
 # include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {
@@ -10,7 +11,7 @@ class Animal
 	virtual ~Animal();
 	Animal(const Animal& other);
 	Animal& operator=(const Animal& other);
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0; //makes the class abstract
 	std::string getType() const;
 
 	protected :
@@ -26,6 +27,10 @@ class Dog : public Animal
 	Dog(const Dog& other);
 	Dog& operator=(const Dog& other);
 	void makeSound() const;
+	Brain* getBrain() const;
+
+	private :
+	Brain* brain;
 };
 
 class Cat : public Animal
@@ -36,6 +41,10 @@ class Cat : public Animal
 	Cat(const Cat& other);
 	Cat& operator=(const Cat& other);
 	void makeSound() const;
+	Brain* getBrain() const;
+
+	private :
+	Brain* brain;
 };
 
 class WrongAnimal

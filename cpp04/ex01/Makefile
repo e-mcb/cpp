@@ -1,7 +1,7 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 
-SRCS = Animal.cpp main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp
+SRCS = Animal.cpp main.cpp Cat.cpp Dog.cpp WrongAnimal.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = animal
 all: $(NAME)
