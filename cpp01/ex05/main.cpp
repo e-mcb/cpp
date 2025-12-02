@@ -3,7 +3,8 @@
 int main() {
 	Harl harl;
 
-	std::string levels[] = {
+	std::string levels[] = 
+	{
 		"DEBUG",
 		"INFO",
 		"WARNING",
@@ -11,7 +12,8 @@ int main() {
 		"UNKNOWN"
 	};
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 5; i++) 
+	{
 		std::cout << "=== " << levels[i] << " ===" << std::endl;
 		harl.complain(levels[i]);
 		std::cout << std::endl;

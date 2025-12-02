@@ -4,8 +4,8 @@ Character::Character(const std::string& name) : _name(name), _trashCount(0)
 {
 	for (int i = 0; i < 4; ++i)
 		_inventory[i] = NULL;
-	for (int i = 0; i < 10 < ++i)
-		_trash[i] == NULL;
+	for (int i = 0; i < 10;  ++i)
+		_trash[i] = NULL;
 }
 
 Character::Character(const Character& other) : _name(other._name)

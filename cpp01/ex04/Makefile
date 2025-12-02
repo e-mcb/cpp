@@ -1,15 +1,11 @@
-# Compiler and flags
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-# Output
-NAME = replace
+NAME = notSed
 
-# Sources
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
-# Default target
 all: $(NAME)
 
 $(NAME): $(OBJS)

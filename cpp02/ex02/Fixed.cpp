@@ -87,11 +87,9 @@ Fixed Fixed::operator+(const Fixed& other) const
 
 Fixed Fixed::operator-(const Fixed& other) const
 {
-	Fixed result;
-	int	negOther = ~other.getRawBits() + 1;
-	int	raw = this->getRawBits() + negOther;
-	result.setRawBits(raw);
-	return (result);
+    Fixed result;
+    result.setRawBits(this->_value - other._value);
+    return result;
 }
 
 Fixed Fixed::operator*(const Fixed& other) const
@@ -128,4 +126,80 @@ Fixed Fixed::operator/(const Fixed& other) const
 	Fixed result;
 	result.setRawBits(static_cast<int>(resultRaw));
 	return (result);
+}
+
+bool Fixed::operator>(const Fixed& other) const
+{
+	return this->_value > other._value;
+}
+
+bool Fixed::operator<(const Fixed& other) const
+{
+	return this->_value < other._value;
+}
+
+bool Fixed::operator>=(const Fixed& other) const
+{
+	return this->_value >= other._value;
+}
+
+bool Fixed::operator<=(const Fixed& other) const
+{
+	return this->_value <= other._value;
+}
+
+bool Fixed::operator==(const Fixed& other) const
+{
+	return this->_value == other._value;
+}
+
+bool Fixed::operator!=(const Fixed& other) const
+{
+	return this->_value != other._value;
+}
+
+Fixed& Fixed::operator++()
+{
+	_value += 1;
+	return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+	Fixed temp(*this);
+	_value += 1;
+	return temp;
+}
+
+Fixed& Fixed::operator--()
+{
+	_value -= 1;
+	return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+	Fixed temp(*this);
+	_value -= 1;
+	return temp;
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+	return (a < b) ? a : b;
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+	return (a < b) ? a : b;
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+	return (a > b) ? a : b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+	return (a > b) ? a : b;
 }

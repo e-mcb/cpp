@@ -7,16 +7,6 @@ int main(void) {
     Fixed const d(b);
     a = Fixed(1234.4321f);
 
-    // Example of calling the float constructor with error handling:
-    /*
-    try {
-        Fixed bigFloat(1e10f); // This might throw if overflow detected
-    }
-    catch (const std::overflow_error& e) {
-        std::cerr << "Overflow error: " << e.what() << std::endl;
-    }
-    */
-
     std::cout << "a is " << a << std::endl;
     std::cout << "b is " << b << std::endl;
     std::cout << "c is " << c << std::endl;

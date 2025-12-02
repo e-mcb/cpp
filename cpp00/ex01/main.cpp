@@ -28,13 +28,6 @@ std::string truncate(const std::string& str)
     return (str);
 }
 
-std::string to_string(int value)
-{
-    std::ostringstream oss;
-    oss << value;
-    return (oss.str());
-}
-
 void printBanner()
 {
     std::cout << "\033[38;5;205m";
@@ -244,7 +237,7 @@ void mainLoop(PhoneBook &phoneBook)
         }
         else
         {
-            std::cout << "Unknown command. Try ADD, SEARCH, or EXIT." << std::endl;
+            continue;
         }
     }
 }

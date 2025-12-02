@@ -17,6 +17,6 @@ int main()
 	for (int i = 0; i < N; i++)
 		horde[i].announce();
 
-	delete[] horde; // Clean up the allocated memory
+	delete[] horde;
 	return 0;
 }

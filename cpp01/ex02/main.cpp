@@ -36,5 +36,3 @@ int main()
     std::cout << red << "Address held by stringPTR: " << stringPTR << reset << std::endl;
     std::cout << blue << "Address held by stringREF: " << &stringREF << reset << std::endl;
 }
-
-

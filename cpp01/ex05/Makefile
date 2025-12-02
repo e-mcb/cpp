@@ -1,13 +1,10 @@
-# Compiler and flags
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-# Files
-NAME = harlFilter
+NAME = Harl
 SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
 
-# Rules
 all: $(NAME)
 
 $(NAME): $(OBJS)
