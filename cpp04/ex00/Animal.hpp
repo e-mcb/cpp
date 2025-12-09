@@ -18,48 +18,5 @@ class Animal
 
 };
 
-class Dog : public Animal
-{
-	public :
-	Dog();
-	~Dog();
-	Dog(const Dog& other);
-	Dog& operator=(const Dog& other);
-	void makeSound() const;
-};
-
-class Cat : public Animal
-{
-	public :
-	Cat();
-	~Cat();
-	Cat(const Cat& other);
-	Cat& operator=(const Cat& other);
-	void makeSound() const;
-};
-
-class WrongAnimal
-{
-	public :
-	WrongAnimal();
-	virtual ~WrongAnimal();
-	WrongAnimal(const WrongAnimal& other);
-	WrongAnimal& operator=(const WrongAnimal& other);
-	virtual void makeSound() const;
-	std::string getType() const;
-
-	protected:
-	std::string Type;
-};
-
-class WrongCat : public WrongAnimal
-{
-	public :
-	WrongCat();
-	~WrongCat();
-	WrongCat(const WrongCat& other);
-	WrongCat& operator=(const WrongCat& other);
-	void makeSound() const;
-};
 
 #endif

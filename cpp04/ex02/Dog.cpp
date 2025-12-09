@@ -42,3 +42,4 @@ Brain* Dog::getBrain() const
 {
     return brain;
 }
+
